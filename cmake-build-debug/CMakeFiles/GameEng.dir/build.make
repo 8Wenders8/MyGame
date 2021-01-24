@@ -103,38 +103,68 @@ CMakeFiles/GameEng.dir/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEng.dir/Game.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wenders/Documents/Projects/GameEng/Game.cpp -o CMakeFiles/GameEng.dir/Game.cpp.s
 
-CMakeFiles/GameEng.dir/State.cpp.o: CMakeFiles/GameEng.dir/flags.make
-CMakeFiles/GameEng.dir/State.cpp.o: ../State.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameEng.dir/State.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameEng.dir/State.cpp.o -c /home/wenders/Documents/Projects/GameEng/State.cpp
+CMakeFiles/GameEng.dir/States/State.cpp.o: CMakeFiles/GameEng.dir/flags.make
+CMakeFiles/GameEng.dir/States/State.cpp.o: ../States/State.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameEng.dir/States/State.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameEng.dir/States/State.cpp.o -c /home/wenders/Documents/Projects/GameEng/States/State.cpp
 
-CMakeFiles/GameEng.dir/State.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameEng.dir/State.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wenders/Documents/Projects/GameEng/State.cpp > CMakeFiles/GameEng.dir/State.cpp.i
+CMakeFiles/GameEng.dir/States/State.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameEng.dir/States/State.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wenders/Documents/Projects/GameEng/States/State.cpp > CMakeFiles/GameEng.dir/States/State.cpp.i
 
-CMakeFiles/GameEng.dir/State.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEng.dir/State.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wenders/Documents/Projects/GameEng/State.cpp -o CMakeFiles/GameEng.dir/State.cpp.s
+CMakeFiles/GameEng.dir/States/State.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEng.dir/States/State.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wenders/Documents/Projects/GameEng/States/State.cpp -o CMakeFiles/GameEng.dir/States/State.cpp.s
+
+CMakeFiles/GameEng.dir/States/GameState.cpp.o: CMakeFiles/GameEng.dir/flags.make
+CMakeFiles/GameEng.dir/States/GameState.cpp.o: ../States/GameState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/GameEng.dir/States/GameState.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameEng.dir/States/GameState.cpp.o -c /home/wenders/Documents/Projects/GameEng/States/GameState.cpp
+
+CMakeFiles/GameEng.dir/States/GameState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameEng.dir/States/GameState.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wenders/Documents/Projects/GameEng/States/GameState.cpp > CMakeFiles/GameEng.dir/States/GameState.cpp.i
+
+CMakeFiles/GameEng.dir/States/GameState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEng.dir/States/GameState.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wenders/Documents/Projects/GameEng/States/GameState.cpp -o CMakeFiles/GameEng.dir/States/GameState.cpp.s
+
+CMakeFiles/GameEng.dir/Entities/Entity.cpp.o: CMakeFiles/GameEng.dir/flags.make
+CMakeFiles/GameEng.dir/Entities/Entity.cpp.o: ../Entities/Entity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/GameEng.dir/Entities/Entity.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GameEng.dir/Entities/Entity.cpp.o -c /home/wenders/Documents/Projects/GameEng/Entities/Entity.cpp
+
+CMakeFiles/GameEng.dir/Entities/Entity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GameEng.dir/Entities/Entity.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wenders/Documents/Projects/GameEng/Entities/Entity.cpp > CMakeFiles/GameEng.dir/Entities/Entity.cpp.i
+
+CMakeFiles/GameEng.dir/Entities/Entity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GameEng.dir/Entities/Entity.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wenders/Documents/Projects/GameEng/Entities/Entity.cpp -o CMakeFiles/GameEng.dir/Entities/Entity.cpp.s
 
 # Object files for target GameEng
 GameEng_OBJECTS = \
 "CMakeFiles/GameEng.dir/main.cpp.o" \
 "CMakeFiles/GameEng.dir/Game.cpp.o" \
-"CMakeFiles/GameEng.dir/State.cpp.o"
+"CMakeFiles/GameEng.dir/States/State.cpp.o" \
+"CMakeFiles/GameEng.dir/States/GameState.cpp.o" \
+"CMakeFiles/GameEng.dir/Entities/Entity.cpp.o"
 
 # External object files for target GameEng
 GameEng_EXTERNAL_OBJECTS =
 
 GameEng: CMakeFiles/GameEng.dir/main.cpp.o
 GameEng: CMakeFiles/GameEng.dir/Game.cpp.o
-GameEng: CMakeFiles/GameEng.dir/State.cpp.o
+GameEng: CMakeFiles/GameEng.dir/States/State.cpp.o
+GameEng: CMakeFiles/GameEng.dir/States/GameState.cpp.o
+GameEng: CMakeFiles/GameEng.dir/Entities/Entity.cpp.o
 GameEng: CMakeFiles/GameEng.dir/build.make
 GameEng: /usr/lib/libsfml-graphics.so.2.5.1
 GameEng: /usr/lib/libsfml-audio.so.2.5.1
 GameEng: /usr/lib/libsfml-window.so.2.5.1
 GameEng: /usr/lib/libsfml-system.so.2.5.1
 GameEng: CMakeFiles/GameEng.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable GameEng"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable GameEng"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GameEng.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

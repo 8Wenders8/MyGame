@@ -2,7 +2,7 @@
  Wrapper for game.
 */
 #pragma once
-#include "State.h"
+#include "States/GameState.h"
 
 class Game
 {
@@ -15,8 +15,11 @@ private:
     sf::Clock dtClock;
     float dt; // deltaTime
 
+    std::stack<State*> states;
+
     //Private functions
     void initVariables();
+    void initStates();
     void initWindow();
 public:
     //Constructors / Destructors
@@ -28,7 +31,11 @@ public:
 
     //Functions
     void pollEvents();
+    void endApplication();
+    //Update
     void updateDeltaTime();
     void update();
+
+    //Render
     void render();
 };

@@ -82,16 +82,28 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/wenders/Documents/Projects/GameEng/Entities/Entity.cpp">
+			<Option target="GameEng"/>
+		</Unit>
+		<Unit filename="/home/wenders/Documents/Projects/GameEng/Entities/Entity.h">
+			<Option target="GameEng"/>
+		</Unit>
 		<Unit filename="/home/wenders/Documents/Projects/GameEng/Game.cpp">
 			<Option target="GameEng"/>
 		</Unit>
 		<Unit filename="/home/wenders/Documents/Projects/GameEng/Game.h">
 			<Option target="GameEng"/>
 		</Unit>
-		<Unit filename="/home/wenders/Documents/Projects/GameEng/State.cpp">
+		<Unit filename="/home/wenders/Documents/Projects/GameEng/States/GameState.cpp">
 			<Option target="GameEng"/>
 		</Unit>
-		<Unit filename="/home/wenders/Documents/Projects/GameEng/State.h">
+		<Unit filename="/home/wenders/Documents/Projects/GameEng/States/GameState.h">
+			<Option target="GameEng"/>
+		</Unit>
+		<Unit filename="/home/wenders/Documents/Projects/GameEng/States/State.cpp">
+			<Option target="GameEng"/>
+		</Unit>
+		<Unit filename="/home/wenders/Documents/Projects/GameEng/States/State.h">
 			<Option target="GameEng"/>
 		</Unit>
 		<Unit filename="/home/wenders/Documents/Projects/GameEng/main.cpp">

@@ -3,10 +3,18 @@
 
 CMakeFiles/GameEng.dir/Game.cpp.o: ../Game.cpp
 CMakeFiles/GameEng.dir/Game.cpp.o: ../Game.h
+CMakeFiles/GameEng.dir/Game.cpp.o: ../States/GameState.h
+CMakeFiles/GameEng.dir/Game.cpp.o: ../States/State.h
 
-CMakeFiles/GameEng.dir/State.cpp.o: ../State.cpp
-CMakeFiles/GameEng.dir/State.cpp.o: ../State.h
+CMakeFiles/GameEng.dir/States/GameState.cpp.o: ../States/GameState.cpp
+CMakeFiles/GameEng.dir/States/GameState.cpp.o: ../States/GameState.h
+CMakeFiles/GameEng.dir/States/GameState.cpp.o: ../States/State.h
+
+CMakeFiles/GameEng.dir/States/State.cpp.o: ../States/State.cpp
+CMakeFiles/GameEng.dir/States/State.cpp.o: ../States/State.h
 
 CMakeFiles/GameEng.dir/main.cpp.o: ../Game.h
+CMakeFiles/GameEng.dir/main.cpp.o: ../States/GameState.h
+CMakeFiles/GameEng.dir/main.cpp.o: ../States/State.h
 CMakeFiles/GameEng.dir/main.cpp.o: ../main.cpp
 

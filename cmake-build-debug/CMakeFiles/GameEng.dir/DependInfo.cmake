@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/wenders/Documents/Projects/GameEng/Entities/Entity.cpp" "/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles/GameEng.dir/Entities/Entity.cpp.o"
   "/home/wenders/Documents/Projects/GameEng/Game.cpp" "/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles/GameEng.dir/Game.cpp.o"
-  "/home/wenders/Documents/Projects/GameEng/State.cpp" "/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles/GameEng.dir/State.cpp.o"
+  "/home/wenders/Documents/Projects/GameEng/States/GameState.cpp" "/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles/GameEng.dir/States/GameState.cpp.o"
+  "/home/wenders/Documents/Projects/GameEng/States/State.cpp" "/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles/GameEng.dir/States/State.cpp.o"
   "/home/wenders/Documents/Projects/GameEng/main.cpp" "/home/wenders/Documents/Projects/GameEng/cmake-build-debug/CMakeFiles/GameEng.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

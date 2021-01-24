@@ -143,6 +143,33 @@ GameEng/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/build
 .PHONY : GameEng/fast
 
+Entities/Entity.o: Entities/Entity.cpp.o
+
+.PHONY : Entities/Entity.o
+
+# target to build an object file
+Entities/Entity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/Entities/Entity.cpp.o
+.PHONY : Entities/Entity.cpp.o
+
+Entities/Entity.i: Entities/Entity.cpp.i
+
+.PHONY : Entities/Entity.i
+
+# target to preprocess a source file
+Entities/Entity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/Entities/Entity.cpp.i
+.PHONY : Entities/Entity.cpp.i
+
+Entities/Entity.s: Entities/Entity.cpp.s
+
+.PHONY : Entities/Entity.s
+
+# target to generate assembly for a file
+Entities/Entity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/Entities/Entity.cpp.s
+.PHONY : Entities/Entity.cpp.s
+
 Game.o: Game.cpp.o
 
 .PHONY : Game.o
@@ -170,32 +197,59 @@ Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/Game.cpp.s
 .PHONY : Game.cpp.s
 
-State.o: State.cpp.o
+States/GameState.o: States/GameState.cpp.o
 
-.PHONY : State.o
+.PHONY : States/GameState.o
 
 # target to build an object file
-State.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/State.cpp.o
-.PHONY : State.cpp.o
+States/GameState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/States/GameState.cpp.o
+.PHONY : States/GameState.cpp.o
 
-State.i: State.cpp.i
+States/GameState.i: States/GameState.cpp.i
 
-.PHONY : State.i
+.PHONY : States/GameState.i
 
 # target to preprocess a source file
-State.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/State.cpp.i
-.PHONY : State.cpp.i
+States/GameState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/States/GameState.cpp.i
+.PHONY : States/GameState.cpp.i
 
-State.s: State.cpp.s
+States/GameState.s: States/GameState.cpp.s
 
-.PHONY : State.s
+.PHONY : States/GameState.s
 
 # target to generate assembly for a file
-State.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/State.cpp.s
-.PHONY : State.cpp.s
+States/GameState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/States/GameState.cpp.s
+.PHONY : States/GameState.cpp.s
+
+States/State.o: States/State.cpp.o
+
+.PHONY : States/State.o
+
+# target to build an object file
+States/State.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/States/State.cpp.o
+.PHONY : States/State.cpp.o
+
+States/State.i: States/State.cpp.i
+
+.PHONY : States/State.i
+
+# target to preprocess a source file
+States/State.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/States/State.cpp.i
+.PHONY : States/State.cpp.i
+
+States/State.s: States/State.cpp.s
+
+.PHONY : States/State.s
+
+# target to generate assembly for a file
+States/State.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameEng.dir/build.make CMakeFiles/GameEng.dir/States/State.cpp.s
+.PHONY : States/State.cpp.s
 
 main.o: main.cpp.o
 
@@ -233,12 +287,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... GameEng"
+	@echo "... Entities/Entity.o"
+	@echo "... Entities/Entity.i"
+	@echo "... Entities/Entity.s"
 	@echo "... Game.o"
 	@echo "... Game.i"
 	@echo "... Game.s"
-	@echo "... State.o"
-	@echo "... State.i"
-	@echo "... State.s"
+	@echo "... States/GameState.o"
+	@echo "... States/GameState.i"
+	@echo "... States/GameState.s"
+	@echo "... States/State.o"
+	@echo "... States/State.i"
+	@echo "... States/State.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
