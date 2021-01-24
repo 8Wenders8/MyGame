@@ -12,13 +12,12 @@ int main()
     //Game loop
     while (game.getWindowIsOpen())
     {
+        /**Update the time that is takes to update and render one frame. */
+        game.updateDeltaTime();
         //Update
         game.update();
-
         //Render
         game.render();
     }
-
-    //End of application
     return 0;
 }

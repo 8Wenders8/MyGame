@@ -12,7 +12,7 @@ void Game::initWindow()
     this->videoMode.width = 1920;
     this->videoMode.height = 1080;
     this->window = new sf::RenderWindow(this->videoMode, "Game 1",sf::Style::Fullscreen);
-    this->window->setFramerateLimit(60);
+    //this->window->setFramerateLimit(60);
 }
 
 //Constructors / Destructors
@@ -35,19 +35,24 @@ const bool Game::getWindowIsOpen() const
 void Game::pollEvents()
 {
     //Event polling
-    while (this->window->pollEvent(this->event))
+    while (this->window->pollEvent(this->sfEvent))
     {
-        switch (this->event.type)
+        switch (this->sfEvent.type)
         {
             case sf::Event::Closed:
                 this->window->close();
                 break;
             case sf::Event::KeyPressed:
-                if (this->event.key.code == sf::Keyboard::Escape)
+                if (this->sfEvent.key.code == sf::Keyboard::Escape)
                     this->window->close();
                 break;
         }
     }
+}
+
+void Game::updateDeltaTime()
+{
+    this->dt = this->dtClock.restart().asSeconds();
 }
 
 void Game::update()

@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wenders/Documents/Projects/GameEng/Game.cpp
+Game.h
+/home/wenders/Documents/Projects/GameEng/Game.h
+
+/home/wenders/Documents/Projects/GameEng/Game.h
+iostream
+-
+vector
+-
+ctime
+-
+sstream
+-
+SFML/Graphics.hpp
+-
+SFML/System.hpp
+-
+SFML/Window.hpp
+-
+SFML/Audio.hpp
+-
+SFML/Network.hpp
+-
+
+/home/wenders/Documents/Projects/GameEng/State.cpp
+State.h
+/home/wenders/Documents/Projects/GameEng/State.h
+
+/home/wenders/Documents/Projects/GameEng/State.h
+
+/home/wenders/Documents/Projects/GameEng/main.cpp
+iostream
+-
+Game.h
+/home/wenders/Documents/Projects/GameEng/Game.h
+

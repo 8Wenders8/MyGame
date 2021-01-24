@@ -1,19 +1,8 @@
 /*
-Created by Wenders on 1/23/21.
-Wrapper for game.
+ Wrapper for game.
 */
 #pragma once
-
-#include<iostream>
-#include<vector>
-#include<ctime>
-#include<sstream>
-
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Window.hpp>
-#include <SFML/Audio.hpp>
-#include <SFML/Network.hpp>
+#include "State.h"
 
 class Game
 {
@@ -21,7 +10,11 @@ private:
     //Variables
     sf::RenderWindow* window;
     sf::VideoMode videoMode;
-    sf::Event event;
+    sf::Event sfEvent;
+
+    sf::Clock dtClock;
+    float dt; // deltaTime
+
     //Private functions
     void initVariables();
     void initWindow();
@@ -35,6 +28,7 @@ public:
 
     //Functions
     void pollEvents();
+    void updateDeltaTime();
     void update();
     void render();
 };
