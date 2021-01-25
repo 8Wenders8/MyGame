@@ -6,8 +6,23 @@ void Game::initVariables()
     this->window = nullptr;
 }
 
+void Game::initKeys() {
+    std::fstream keys("Config/supported_keys.ini");
+
+    if(keys.is_open()){
+
+    }
+    keys.close();
+
+    this->supportedKeys["Escape"] = sf::Keyboard::Key::Escape;
+    this->supportedKeys["A"] = sf::Keyboard::Key::A;
+    this->supportedKeys["D"] = sf::Keyboard::Key::D;
+    this->supportedKeys["W"] = sf::Keyboard::Key::W;
+    this->supportedKeys["S"] = sf::Keyboard::Key::S;
+}
+
 void Game::initStates() {
-    this->states.push(new GameState(this->window));
+    this->states.push(new GameState(this->window, &this->supportedKeys));
 }
 
 void Game::initWindow()
@@ -35,12 +50,12 @@ void Game::initWindow()
     this->window->setVerticalSyncEnabled(vertical_sync_enabled);
 }
 
-
 //Constructors / Destructors
 Game::Game()
 {
     this->initVariables();
     this->initWindow();
+    this->initKeys();
     this->initStates();
 }
 
@@ -120,3 +135,4 @@ void Game::render()
 
     this->window->display();
 }
+
