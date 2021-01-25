@@ -32,6 +32,14 @@ SFML/Audio.hpp
 SFML/Network.hpp
 -
 
+/home/wenders/Documents/Projects/GameEng/Game.cpp
+Game.h
+/home/wenders/Documents/Projects/GameEng/Game.h
+
+/home/wenders/Documents/Projects/GameEng/Game.h
+States/GameState.h
+/home/wenders/Documents/Projects/GameEng/States/GameState.h
+
 /home/wenders/Documents/Projects/GameEng/States/GameState.cpp
 GameState.h
 /home/wenders/Documents/Projects/GameEng/States/GameState.h

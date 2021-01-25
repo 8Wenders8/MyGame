@@ -6,28 +6,9 @@ void Game::initVariables()
     this->window = nullptr;
 }
 
-void Game::initKeys() {
-    std::fstream keys("Config/supported_keys.ini");
-
-    if(keys.is_open()){
-
-    }
-    keys.close();
-
-    this->supportedKeys["Escape"] = sf::Keyboard::Key::Escape;
-    this->supportedKeys["A"] = sf::Keyboard::Key::A;
-    this->supportedKeys["D"] = sf::Keyboard::Key::D;
-    this->supportedKeys["W"] = sf::Keyboard::Key::W;
-    this->supportedKeys["S"] = sf::Keyboard::Key::S;
-}
-
-void Game::initStates() {
-    this->states.push(new GameState(this->window, &this->supportedKeys));
-}
-
 void Game::initWindow()
 {
-    std::ifstream ifs("Config/window.ini");
+    std::ifstream ifs("../Config/window.ini");
     std::string title = "None";
     sf::VideoMode window_bound(1920, 1080,32);
     unsigned framerate_limit = 120;
@@ -48,6 +29,26 @@ void Game::initWindow()
     this->window = new sf::RenderWindow(window_bound, title, sf::Style::Fullscreen);
     this->window->setFramerateLimit(framerate_limit);
     this->window->setVerticalSyncEnabled(vertical_sync_enabled);
+}
+
+void Game::initKeys() {
+    /* Read from supported keys file and bind them.*/
+    /**DEBUG INFO: I had to use ../ before Config, doesn't make sense to me but works. In every file opening.*/
+    std::ifstream ifs("../Config/supported_keys.ini");
+    std::cout <<  ifs.is_open();
+
+    if(ifs.is_open()){
+        std::string key = "A";
+        int key_value = 0;
+        while(ifs >> key >> key_value){
+            this->supportedKeys[key] = key_value;
+        }
+    }
+    ifs.close();
+}
+
+void Game::initStates() {
+    this->states.push(new GameState(this->window, &this->supportedKeys));
 }
 
 //Constructors / Destructors

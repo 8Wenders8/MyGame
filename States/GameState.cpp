@@ -1,13 +1,17 @@
 #include "GameState.h"
 //Private functions
 void GameState::initKeybinds() {
-    this->keybinds["CLOSE"] = this->supportedKeys->at("Escape");
-    this->keybinds["MOVE_LEFT"] = this->supportedKeys->at("A");
-    this->keybinds["MOVE_RIGHT"] = this->supportedKeys->at("D");
-    this->keybinds["MOVE_UP"] = this->supportedKeys->at("W");
-    this->keybinds["MOVE_DOWN"] = this->supportedKeys->at("S");
-}
+    std::ifstream keys_file("../Config/gamestate_keybinds.ini");
 
+    if(keys_file.is_open()){
+        std::string key = "";
+        std::string key2 = "";
+        while(keys_file >> key >> key2){
+            this->keybinds[key] = this->supportedKeys->at(key2);
+        }
+    }
+    keys_file.close();
+}
 
 //Constructors / Destructors
 GameState::GameState(sf::RenderWindow *StateWindow, std::map<std::string, int>* supportedKeys) : State(StateWindow, supportedKeys)
