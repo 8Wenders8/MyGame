@@ -35,7 +35,6 @@ void Game::initKeys() {
     /* Read from supported keys file and bind them.*/
     /**DEBUG INFO: I had to use ../ before Config, doesn't make sense to me but works. In every file opening.*/
     std::ifstream ifs("../Config/supported_keys.ini");
-    std::cout <<  ifs.is_open();
 
     if(ifs.is_open()){
         std::string key = "A";
@@ -58,6 +57,7 @@ Game::Game()
     this->initWindow();
     this->initKeys();
     this->initStates();
+    sf::Keyboard::Key::S;
 }
 
 Game::~Game()
