@@ -6,12 +6,17 @@
 
 class MainMenuState : public State {
 private:
-    //Functions
+    /* Variables */
+    sf::RectangleShape background;
+    sf::Font font;
+    Button* gameStatenBTN;
+    /* Private functions */
+    void initFonts();
     void initKeybinds();
 public:
     MainMenuState(sf::RenderWindow *StateWindow,std::map<std::string, int>* supportedKeys);
     virtual ~MainMenuState();
-
+    /* Functions */
     void endState();
     void updateInput(const float& dt);
     void update(const float& dt);

@@ -1,6 +1,6 @@
 #ifndef GAMEENG_ENTITY_H
 #define GAMEENG_ENTITY_H
-
+/** Class for creating entities in the game. */
 #include<iostream>
 #include<vector>
 #include<ctime>
@@ -20,17 +20,16 @@ class Entity {
 private:
 
 protected:
+    /* Protected functions - might change to private and use get/set in the future. */
     sf::RectangleShape shape;
     float movementSpeed;
 public:
     Entity();
     virtual ~Entity();
 
-    //Functions
+    /* Functions */
     virtual void move(const float& dt, const float dir_x, const float dir_y);
     virtual void update(const float& dt);
     virtual void render(sf::RenderTarget* target);
 };
-
-
 #endif //GAMEENG_ENTITY_H
