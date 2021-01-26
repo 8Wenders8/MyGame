@@ -8,6 +8,10 @@ protected:
     std::map<std::string, int>* supportedKeys;
     std::map<std::string, int> keybinds;
     bool quit;
+    /* Mouuse position variables */
+    sf::Vector2u mousePosScreen;
+    sf::Vector2i mousePosWindow;
+    sf::Vector2f mousePosView;
 
     //Resources
     std::vector<sf::Texture> textures;

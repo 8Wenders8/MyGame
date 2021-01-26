@@ -2,7 +2,7 @@
  Wrapper for game.
 */
 #pragma once
-#include "States/GameState.h"
+#include "States/MainMenuState.h"
 
 class Game
 {
