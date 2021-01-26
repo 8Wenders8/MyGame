@@ -1,6 +1,6 @@
 #pragma once
 /** Parent class for all possible States that the game can be in. */
-#include "../Entities/Entity.h"
+#include "../Entities/Player.h"
 
 class State {
 protected:
@@ -16,7 +16,7 @@ protected:
     sf::Vector2i mousePosWindow;
     sf::Vector2f mousePosView;
     /* Resources */
-    std::vector<sf::Texture> textures;
+    std::map<std::string, sf::Texture> textures;
     /* Protected Functions -- In future may be changed to access this in private with get/set. */
     virtual void initKeybinds() = 0;
 public:
