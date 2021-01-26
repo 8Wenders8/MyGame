@@ -14,7 +14,7 @@ void GameState::initKeybinds() {
 }
 
 //Constructors / Destructors
-GameState::GameState(sf::RenderWindow *StateWindow, std::map<std::string, int>* supportedKeys, std::stack<State*>* states) : State(StateWindow, supportedKeys, states)
+GameState::GameState(sf::RenderWindow *stateWindow, std::map<std::string, int>* supportedKeys, std::stack<State*>* states) : State(stateWindow, supportedKeys, states)
 {
     this->initKeybinds();
 }
@@ -24,9 +24,9 @@ GameState::~GameState()
 }
 
 void GameState::updateInput(const float &dt) {
-    this->checkForQuit();
-
     /* Update player input */
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("CLOSE"))))
+        this->endState();
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("MOVE_LEFT"))))
         this->player.move(dt,-1.f, 0.f);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("MOVE_RIGHT"))))
@@ -37,10 +37,6 @@ void GameState::updateInput(const float &dt) {
         this->player.move(dt, 0.f, 1.f);
 }
 
-void GameState::endState() {
-    std::cout<<"Quitting\n";
-}
-
 void GameState::update(const float& dt) {
     this->updateMousePositions();
     this->updateInput(dt);
@@ -49,7 +45,7 @@ void GameState::update(const float& dt) {
 
 void GameState::render(sf::RenderTarget* target) {
     if(!target)
-        target = this->StateWindow;
+        target = this->stateWindow;
 
-    this->player.render(this->StateWindow);
+    this->player.render(this->stateWindow);
 }

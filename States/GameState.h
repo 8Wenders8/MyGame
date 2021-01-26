@@ -9,10 +9,9 @@ private:
     /* Private Functions */
     void initKeybinds();
 public:
-    GameState(sf::RenderWindow *StateWindow,std::map<std::string, int>* supportedKeys, std::stack<State*>* states);
+    GameState(sf::RenderWindow *stateWindow, std::map<std::string, int>* supportedKeys, std::stack<State*>* states);
     virtual ~GameState();
     /* Functions */
-    void endState();
     void updateInput(const float& dt);
     void update(const float& dt);
     void render(sf::RenderTarget* target= nullptr);

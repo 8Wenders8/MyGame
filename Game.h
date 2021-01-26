@@ -1,16 +1,16 @@
-/*
- Wrapper for game.
-*/
 #pragma once
 #include "States/MainMenuState.h"
 
+/* Wrapper for game. */
 class Game
 {
 private:
-    //Variables
+    /* Variables */
     sf::RenderWindow* window;
-    sf::VideoMode videoMode;
     sf::Event sfEvent;
+    std::vector<sf::VideoMode> videoModes;
+    sf::ContextSettings windowSettings;
+    bool fullscreen;
 
     sf::Clock dtClock;
     float dt; // deltaTime
@@ -19,26 +19,24 @@ private:
 
     std::map<std::string, int> supportedKeys;
 
-    //Private functions
+    /* Private functions */
     void initVariables();
     void initKeys();
     void initStates();
     void initWindow();
 public:
-    //Constructors / Destructors
     Game();
     virtual ~Game();
 
-    //Accessors
+    /* Accessors */
     const bool getWindowIsOpen() const;
 
-    //Functions
+    /* Functions */
     void pollEvents();
     void endApplication();
     //Update
     void updateDeltaTime();
     void update();
-
     //Render
     void render();
 };

@@ -18,15 +18,19 @@
 
 class Entity {
 private:
-
+    void initVariables();
 protected:
-    /* Protected functions - might change to private and use get/set in the future. */
-    sf::RectangleShape shape;
+    /* Variables */
+    sf::Texture* texture;
+    sf::Sprite* sprite;
     float movementSpeed;
+    /* Protected functions - might change to private and use get/set in the future. */
+
 public:
     Entity();
     virtual ~Entity();
-
+    /* Component functions */
+    void createSprite(sf::Texture* texture);
     /* Functions */
     virtual void move(const float& dt, const float dir_x, const float dir_y);
     virtual void update(const float& dt);

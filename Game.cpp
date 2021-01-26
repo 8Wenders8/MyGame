@@ -4,29 +4,39 @@
 void Game::initVariables()
 {
     this->window = nullptr;
+    this->fullscreen = true;
+    this->dt = 0.f;
 }
 
 void Game::initWindow()
 {
+    /* Creates a SFML window using options from window.ini file. */
     std::ifstream ifs("../Config/window.ini");
+    this->videoModes = sf::VideoMode::getFullscreenModes();
+
     std::string title = "None";
-    sf::VideoMode window_bound(1920, 1080,32);
+    sf::VideoMode window_bound = sf::VideoMode::getDesktopMode();
+    unsigned antialiasing_level = 0;
     unsigned framerate_limit = 120;
+    bool full_screen = true;
     bool vertical_sync_enabled = false;
 
     if(ifs.is_open()){
         std::getline(ifs, title);
         ifs >> window_bound.width >> window_bound.height >> window_bound.bitsPerPixel;
+        ifs >> full_screen;
         ifs >> framerate_limit;
         ifs >> vertical_sync_enabled;
+        ifs >> antialiasing_level;
     }
 
     ifs.close();
-
-    this->videoMode.bitsPerPixel=32;
-    this->videoMode.width = 1920;
-    this->videoMode.height = 1080;
-    this->window = new sf::RenderWindow(window_bound, title, sf::Style::Fullscreen);
+    this->fullscreen = full_screen;
+    this->windowSettings.antialiasingLevel = antialiasing_level;
+    if(this->fullscreen)
+        this->window = new sf::RenderWindow(window_bound, title, sf::Style::Fullscreen , this->windowSettings);
+    else
+        this->window = new sf::RenderWindow(window_bound, title, sf::Style::Titlebar | sf::Style::Close , this->windowSettings);
     this->window->setFramerateLimit(framerate_limit);
     this->window->setVerticalSyncEnabled(vertical_sync_enabled);
 }

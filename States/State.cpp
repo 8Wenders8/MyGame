@@ -1,8 +1,8 @@
 #include "State.h"
 /* Constructors - Destructors */
-State::State(sf::RenderWindow *StateWindow, std::map<std::string, int>*  supportedKeys, std::stack<State*>* states)
+State::State(sf::RenderWindow *stateWindow, std::map<std::string, int>*  supportedKeys, std::stack<State*>* states)
 {
-    this->StateWindow = StateWindow;
+    this->stateWindow = stateWindow;
     this->states = states;
     this->supportedKeys = supportedKeys;
     this->quit = false;
@@ -12,10 +12,8 @@ State::~State()
 
 }
 /* Functions */
-void State::checkForQuit() {
-    if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("CLOSE")))){
-        this->quit = true;
-    }
+void State::endState() {
+    this->quit = true;
 }
 
 const bool &State::getQuit() const {
@@ -24,6 +22,7 @@ const bool &State::getQuit() const {
 
 void State::updateMousePositions() {
     this->mousePosScreen = sf::Mouse::getPosition();
-    this->mousePosWindow = sf::Mouse::getPosition(*this->StateWindow);
-    this->mousePosView = this->StateWindow->mapPixelToCoords(sf::Mouse::getPosition(*this->StateWindow));
+    this->mousePosWindow = sf::Mouse::getPosition(*this->stateWindow);
+    this->mousePosView = this->stateWindow->mapPixelToCoords(sf::Mouse::getPosition(*this->stateWindow));
 }
+
