@@ -4,6 +4,8 @@
 
 class State {
 protected:
+    /* Variables */
+    std::stack<State*>* states;
     sf::RenderWindow *StateWindow;
     /* Passing supported keys, so they can be bound to another keys.*/
     std::map<std::string, int>* supportedKeys;
@@ -18,7 +20,7 @@ protected:
     /* Protected Functions -- In future may be changed to access this in private with get/set. */
     virtual void initKeybinds() = 0;
 public:
-    State(sf::RenderWindow *StateWindow, std::map<std::string, int>* supportedKeys);
+    State(sf::RenderWindow *StateWindow, std::map<std::string, int>* supportedKeys, std::stack<State*>* states);
     virtual ~State();
     /* Return if quit key/button has been pressed */
     virtual void checkForQuit();

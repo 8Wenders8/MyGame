@@ -14,7 +14,7 @@ void GameState::initKeybinds() {
 }
 
 //Constructors / Destructors
-GameState::GameState(sf::RenderWindow *StateWindow, std::map<std::string, int>* supportedKeys) : State(StateWindow, supportedKeys)
+GameState::GameState(sf::RenderWindow *StateWindow, std::map<std::string, int>* supportedKeys, std::stack<State*>* states) : State(StateWindow, supportedKeys, states)
 {
     this->initKeybinds();
 }
@@ -26,7 +26,7 @@ GameState::~GameState()
 void GameState::updateInput(const float &dt) {
     this->checkForQuit();
 
-    //Update player input
+    /* Update player input */
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("MOVE_LEFT"))))
         this->player.move(dt,-1.f, 0.f);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->keybinds.at("MOVE_RIGHT"))))

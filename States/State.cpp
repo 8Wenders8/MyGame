@@ -1,8 +1,9 @@
 #include "State.h"
 /* Constructors - Destructors */
-State::State(sf::RenderWindow *StateWindow, std::map<std::string, int>*  supportedKeys)
+State::State(sf::RenderWindow *StateWindow, std::map<std::string, int>*  supportedKeys, std::stack<State*>* states)
 {
     this->StateWindow = StateWindow;
+    this->states = states;
     this->supportedKeys = supportedKeys;
     this->quit = false;
 }
