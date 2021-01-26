@@ -1,0 +1,5 @@
+*.log
+*.o
+*.make
+*.internal
+*.includecache
