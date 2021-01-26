@@ -5,7 +5,7 @@ void Player::initVariables() {
 }
 
 void Player::initComponents() {
-    //this->createSprite(texture);
+    this->createMovementComponent(200.f);
 }
 
 /* Constructors - Destructors */

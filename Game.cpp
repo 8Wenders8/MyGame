@@ -67,7 +67,6 @@ Game::Game()
     this->initWindow();
     this->initKeys();
     this->initStates();
-    sf::Keyboard::Key::S;
 }
 
 Game::~Game()
