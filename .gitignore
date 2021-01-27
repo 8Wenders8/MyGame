@@ -3,3 +3,5 @@
 *.make
 *.internal
 *.includecache
+.idea
+cmake-build-debug
