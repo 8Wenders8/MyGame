@@ -18,7 +18,7 @@ void GameState::initTextures() {
         throw("ERROR::GAMESTATE::FAILED TO LOAD PLAYER IDLE TEXTURE"); }
 }
 void GameState::initPlayers() {
-    this->player = new Player(50, 50, &this->textures["PLAYER_IDLE"]);
+    this->player = new Player(50, 50, this->textures["PLAYER_IDLE"]);
 }
 
 

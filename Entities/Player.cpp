@@ -9,16 +9,15 @@ void Player::initComponents() {
 }
 
 /* Constructors - Destructors */
-Player::Player(float x, float y, sf::Texture *texture) {
+Player::Player(float x, float y, sf::Texture& texture) {
     this->initVariables();
     this->initComponents();
 
-    this->createSprite(texture);
+    this->setTexture(texture);
     this->setPosition(x,y);
-    this->sprite->setScale(0.09f, 0.09f); // REMOVE after
+    this->sprite.setScale(0.09f, 0.09f); // REMOVE after
 }
 
 Player::~Player() {
 
 }
-
